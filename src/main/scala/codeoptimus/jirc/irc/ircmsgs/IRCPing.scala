@@ -5,6 +5,5 @@ package codeoptimus.jirc.ircmsgs
  * Created with IntelliJ IDEA.
  * User: Aaron Allred
  */
-class IRCPrivMSG {
+case class IRCPing(pinghost: String) extends IRCCmd
 
-}

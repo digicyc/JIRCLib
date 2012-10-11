@@ -1,17 +1,28 @@
 package codeoptimus.jirc.parsers
 
-import codeoptimus.jirc.ircmsgs.{IRCNotice, IRCPrivMSG}
+import codeoptimus.jirc.ircmsgs._
+import codeoptimus.jirc.ircmsgs.IRCPrivMSG
 
 /**
  * 
  * Created with IntelliJ IDEA.
  * User: Aaron Allred
  */
-class InputParser {
-  def parseInput(msg: String): (String, String) = {
-    msg match {
-      case pMsg: IRCPrivMSG =>
-      case notice: IRCNotice =>
+object InputParser {
+  val PRIVMsg = """:(.*)!(.*) PRIVMSG (.*) :(.*)\r\n""".r
+  val PINGMsg = """PING :(.*)\r\n""".r
+
+  def parseInput(data: String): Option[IRCCmd] = {
+    // prefix, command, params
+    if (data.length < 2)
+      None
+    else {
+      data match {
+        case PRIVMsg(sender, host, recv, msg) =>
+          Option(IRCPrivMsg(sender, host, recv, msg))
+        case PINGMsg(pingHost) =>
+          Option(IRCPing(pingHost))
+      }
     }
   }
 }

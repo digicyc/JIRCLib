@@ -2,9 +2,10 @@ package codeoptimus.jirc.actors
 
 import akka.actor.ActorLogging
 import akka.actor.Actor
-import java.net.{Socket, InetAddress}
 import codeoptimus.jirc.conn.IRCConnection
 import java.io.{BufferedReader, IOException}
+import codeoptimus.jirc.parsers.InputParser
+import codeoptimus.jirc.ircmsgs.IRCCmd
 
 /**
  * Our IRC input stream to receive ircmsgs from Server.
@@ -20,7 +21,8 @@ class InputActor extends Actor with ActorLogging {
       while (true) {
         // read from socket and send to Parser.
         try {
-          input.readLine()
+          val msgType: Option[IRCCmd] = InputParser.parseInput(input.readLine())
+          // Send Event down chain.
 
         } catch {
           case ioe: IOException =>
@@ -28,7 +30,5 @@ class InputActor extends Actor with ActorLogging {
             // Bail out cause Things died.
         }
       }
-    case "stop" =>
-      // Kill Actor and clean up.
   }
 }
