@@ -1,12 +1,9 @@
 package codeforwar.jirc.parsers
 
-import codeforwar.jirc.ircmsgs._
-import codeforwar.jirc.ircmsgs.IRCPrivMSG
+import codeforwar.jirc.irc.msg._
 
 /**
- * 
- * Created with IntelliJ IDEA.
- * User: Aaron Allred
+ * Parse the Input Stream messages.
  */
 object InputParser {
   val PRIVMsg = """:(.*)!(.*) PRIVMSG (.*) :(.*)\r\n""".r
@@ -19,7 +16,7 @@ object InputParser {
     else {
       data match {
         case PRIVMsg(sender, host, recv, msg) =>
-          Option(IRCPrivMsg(sender, host, recv, msg))
+          Option(IRCPrivMSG(sender, host, recv, msg))
         case PINGMsg(pingHost) =>
           Option(IRCPing(pingHost))
       }

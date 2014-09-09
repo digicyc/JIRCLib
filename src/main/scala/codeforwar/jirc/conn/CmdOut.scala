@@ -1,4 +1,4 @@
-package codeoforwar.jirc.conn
+package codeforwar.jirc.conn
 
 /**
  * 

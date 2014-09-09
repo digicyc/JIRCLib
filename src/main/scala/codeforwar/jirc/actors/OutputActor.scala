@@ -2,7 +2,8 @@ package codeforwar.jirc.actors
 
 import akka.actor.Actor
 import akka.actor.ActorLogging
-import codeoptimus.jirc.conn.CmdOut
+
+import codeforwar.jirc.conn.CmdOut
 
 /**
  * 

@@ -1,4 +1,4 @@
-package codeforwar.jirc.ircmsgs
+package codeforwar.jirc.irc.msg
 
 /**
  * 
