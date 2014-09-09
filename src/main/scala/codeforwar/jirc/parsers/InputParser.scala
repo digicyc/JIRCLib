@@ -1,7 +1,7 @@
-package codeoptimus.jirc.parsers
+package codeforwar.jirc.parsers
 
-import codeoptimus.jirc.ircmsgs._
-import codeoptimus.jirc.ircmsgs.IRCPrivMSG
+import codeforwar.jirc.ircmsgs._
+import codeforwar.jirc.ircmsgs.IRCPrivMSG
 
 /**
  * 

@@ -1,8 +1,8 @@
-package codeoptimus.jirc.conn
+package codeforwar.jirc.ircmsgs
 
 /**
  * 
  * Created with IntelliJ IDEA.
  * User: Aaron Allred
  */
-case class CmdOut(msg: String)
+trait IRCCmd

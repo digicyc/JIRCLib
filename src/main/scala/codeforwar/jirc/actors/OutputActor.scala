@@ -1,4 +1,4 @@
-package codeoptimus.jirc.actors
+package codeforwar.jirc.actors
 
 import akka.actor.Actor
 import akka.actor.ActorLogging

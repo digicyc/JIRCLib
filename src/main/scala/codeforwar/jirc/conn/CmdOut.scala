@@ -1,10 +1,8 @@
-package codeoptimus.jirc.ircmsgs
+package codeoforwar.jirc.conn
 
 /**
  * 
  * Created with IntelliJ IDEA.
  * User: Aaron Allred
  */
-class IRCNotice {
-
-}
+case class CmdOut(msg: String)

@@ -1,4 +1,4 @@
-package codeoptimus.jirc.conn
+package codeforwar.jirc.conn
 
 import java.net.{Socket, InetAddress}
 import java.io.BufferedWriter

@@ -1,8 +1,10 @@
-package codeoptimus.jirc.ircmsgs
+package codeforwar.jirc.irc
 
 /**
  * 
  * Created with IntelliJ IDEA.
  * User: Aaron Allred
  */
-trait IRCCmd
+class IRCChannel {
+
+}

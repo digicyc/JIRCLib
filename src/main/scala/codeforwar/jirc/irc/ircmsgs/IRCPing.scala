@@ -1,4 +1,4 @@
-package codeoptimus.jirc.ircmsgs
+package codeforwar.jirc.ircmsgs
 
 /**
  * 
